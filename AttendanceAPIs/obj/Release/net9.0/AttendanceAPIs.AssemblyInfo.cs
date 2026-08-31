@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AttendanceAPIs")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1ebf118b95740230b99661099fea71f98dc16965")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+460cd1e0c7878b6f6a3b5e569803d3c60085975a")]
 [assembly: System.Reflection.AssemblyProductAttribute("AttendanceAPIs")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AttendanceAPIs")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
