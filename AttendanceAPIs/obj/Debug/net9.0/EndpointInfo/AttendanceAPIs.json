@@ -1,0 +1,390 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Student & Attendance Management API",
+    "description": "API specifications for managing student profiles, photo uploads, embeddings, and attendance tracking.",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/api/attendance/hello": {
+      "get": {
+        "tags": [
+          "AttendanceApi"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/attendance": {
+      "post": {
+        "tags": [
+          "AttendanceApi"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ApiAttendanceDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ApiAttendanceDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ApiAttendanceDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/auth/hello": {
+      "get": {
+        "tags": [
+          "Auth"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/auth/login": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserLogin"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserLogin"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserLogin"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/emb/{pt}/{sg}/{pg}/{t}": {
+      "post": {
+        "tags": [
+          "Embedding"
+        ],
+        "parameters": [
+          {
+            "name": "pt",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sg",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "pg",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "t",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/attendance/emb/{pg}/{t}": {
+      "post": {
+        "tags": [
+          "Embedding"
+        ],
+        "parameters": [
+          {
+            "name": "pg",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "t",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/ph/{pt}/{sg}/{pg}": {
+      "post": {
+        "tags": [
+          "Photo"
+        ],
+        "parameters": [
+          {
+            "name": "pt",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sg",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "pg",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/attendance/ph/{pg}": {
+      "post": {
+        "tags": [
+          "Photo"
+        ],
+        "parameters": [
+          {
+            "name": "pg",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Students/hello": {
+      "get": {
+        "tags": [
+          "Students"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/students": {
+      "post": {
+        "tags": [
+          "Students"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ApiStudentDto"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ApiStudentDto"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/ApiStudentDto"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ApiAttendanceDto": {
+        "type": "object",
+        "properties": {
+          "scg": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "dt": {
+            "type": "string",
+            "nullable": true
+          },
+          "tpc": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "apc": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ph": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ApiAttendancePhotoDto"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ApiAttendancePhotoDto": {
+        "type": "object",
+        "properties": {
+          "pg": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "apc": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "std": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ApiStudentDto": {
+        "type": "object",
+        "properties": {
+          "sg": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "n": {
+            "type": "string",
+            "nullable": true
+          },
+          "c": {
+            "type": "string",
+            "nullable": true
+          },
+          "a": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "g": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserLogin": {
+        "required": [
+          "username"
+        ],
+        "type": "object",
+        "properties": {
+          "username": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

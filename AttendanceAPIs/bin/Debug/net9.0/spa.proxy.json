@@ -1,0 +1,10 @@
+{
+"SpaProxyServer": {
+"ServerUrl": "https://local.pmposhan.gov.in:443",
+"RedirectUrl": "",
+"LaunchCommand": "npm start",
+"WorkingDirectory": "E:\\GajendraNagle\\Live_Project\\PMPoshanNetCoreWebUI\\PMPoshanWithAngular.Server\\..\\pmposhanwithangular.client",
+"MaxTimeoutInSeconds": "120",
+"KeepRunning": "false"
+}
+}

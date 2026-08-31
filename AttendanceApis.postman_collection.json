@@ -1,0 +1,341 @@
+{
+  "info": {
+    "_postman_id": "9c9d04b6-3053-47a5-a45a-bd89b1459146",
+    "name": "AttendanceApis",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "44426592",
+    "_collection_link": "https://go.postman.co/collection/44426592-9c9d04b6-3053-47a5-a45a-bd89b1459146?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Student",
+      "item": [
+        {
+          "name": "https://localhost:7283/students",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "accept",
+                "value": "*/*"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "[\r\n  {\r\n    \"sg\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n    \"n\": \"string\",\r\n    \"c\": \"string\",\r\n    \"a\": 0,\r\n    \"g\": \"string\"\r\n  }\r\n]",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseURL}}students",
+              "host": [
+                "{{baseURL}}students"
+              ]
+            },
+            "description": "Generated from cURL: curl -X 'POST' \\\r\n  'https://localhost:7283/students' \\\r\n  -H 'accept: */*' \\\r\n  -H 'Content-Type: application/json' \\\r\n  -d '[\r\n  {\r\n    \"sg\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n    \"n\": \"string\",\r\n    \"c\": \"string\",\r\n    \"a\": 0,\r\n    \"g\": \"string\"\r\n  }\r\n]'"
+          },
+          "response": []
+        },
+        {
+          "name": "https://localhost:7283/api/Students/hello",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "accept",
+                "value": "*/*"
+              }
+            ],
+            "url": {
+              "raw": "{{baseURL}}api/Students/hello",
+              "host": [
+                "{{baseURL}}api"
+              ],
+              "path": [
+                "Students",
+                "hello"
+              ]
+            },
+            "description": "Generated from cURL: curl -X 'GET' \\\r\n  'https://localhost:7283/api/Students/hello' \\\r\n  -H 'accept: */*'"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Attendance",
+      "item": [
+        {
+          "name": "https://localhost:7283/api/attendance/hello",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "accept",
+                "value": "*/*"
+              }
+            ],
+            "url": {
+              "raw": "{{baseURL}}api/attendance/hello",
+              "host": [
+                "{{baseURL}}api"
+              ],
+              "path": [
+                "attendance",
+                "hello"
+              ]
+            },
+            "description": "Generated from cURL: curl -X 'GET' \\\r\n  'https://localhost:7283/api/attendance/hello' \\\r\n  -H 'accept: */*'"
+          },
+          "response": []
+        },
+        {
+          "name": "https://localhost:7283/attendance",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "accept",
+                "value": "*/*"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"scg\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"dt\": \"string\",\r\n  \"tpc\": 0,\r\n  \"apc\": 0,\r\n  \"ph\": [\r\n    {\r\n      \"pg\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n      \"apc\": 0,\r\n      \"std\": [\r\n        \"3fa85f64-5717-4562-b3fc-2c963f66afa6\"\r\n      ]\r\n    }\r\n  ]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseURL}}attendance",
+              "host": [
+                "{{baseURL}}attendance"
+              ]
+            },
+            "description": "Generated from cURL: curl -X 'POST' \\\r\n  'https://localhost:7283/attendance' \\\r\n  -H 'accept: */*' \\\r\n  -H 'Content-Type: application/json' \\\r\n  -d '{\r\n  \"scg\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n  \"dt\": \"string\",\r\n  \"tpc\": 0,\r\n  \"apc\": 0,\r\n  \"ph\": [\r\n    {\r\n      \"pg\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n      \"apc\": 0,\r\n      \"std\": [\r\n        \"3fa85f64-5717-4562-b3fc-2c963f66afa6\"\r\n      ]\r\n    }\r\n  ]\r\n}'"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "https://localhost:7283/api/auth/login",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "accept",
+                "value": "*/*"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"username\": \"laxmi\",\r\n  \"password\": \"laxmi\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseURL}}api/auth/login",
+              "host": [
+                "{{baseURL}}api"
+              ],
+              "path": [
+                "auth",
+                "login"
+              ]
+            },
+            "description": "Generated from cURL: curl -X 'POST' \\\r\n  'https://localhost:7283/api/auth/login' \\\r\n  -H 'accept: */*' \\\r\n  -H 'Content-Type: application/json' \\\r\n  -d '{\r\n  \"username\": \"laxmi\",\r\n  \"password\": \"laxmi\"\r\n}'"
+          },
+          "response": []
+        },
+        {
+          "name": "https://localhost:7283/api/auth/hello",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "accept",
+                "value": "*/*"
+              }
+            ],
+            "url": {
+              "raw": "{{baseURL}}api/auth/hello",
+              "host": [
+                "{{baseURL}}api"
+              ],
+              "path": [
+                "auth",
+                "hello"
+              ]
+            },
+            "description": "Generated from cURL: curl -X 'GET' \\\r\n  'https://localhost:7283/api/auth/hello' \\\r\n  -H 'accept: */*'"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Embedding",
+      "item": [
+        {
+          "name": "https://localhost:7283/emb/a/3fa85f64-5717-4562-b3fc-2c963f66afa6/3fa85f64-5717-4562-b3fc-2c963f66afa7/123",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "accept",
+                "value": "*/*"
+              }
+            ],
+            "url": {
+              "raw": "{{baseURL}}emb/a/3fa85f64-5717-4562-b3fc-2c963f66afa6/3fa85f64-5717-4562-b3fc-2c963f66afa7/123",
+              "host": [
+                "{{baseURL}}emb"
+              ],
+              "path": [
+                "a",
+                "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+                "3fa85f64-5717-4562-b3fc-2c963f66afa7",
+                "123"
+              ]
+            },
+            "description": "Generated from cURL: curl -X 'POST' \\\r\n  'https://localhost:7283/emb/a/3fa85f64-5717-4562-b3fc-2c963f66afa6/3fa85f64-5717-4562-b3fc-2c963f66afa7/123' \\\r\n  -H 'accept: */*' \\\r\n  -d ''"
+          },
+          "response": []
+        },
+        {
+          "name": "https://localhost:7283/attendance/emb/3fa85f64-5717-4562-b3fc-2c963f66afa6/123",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "accept",
+                "value": "*/*"
+              }
+            ],
+            "url": {
+              "raw": "{{baseURL}}attendance/emb/3fa85f64-5717-4562-b3fc-2c963f66afa6/123",
+              "host": [
+                "{{baseURL}}attendance"
+              ],
+              "path": [
+                "emb",
+                "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+                "123"
+              ]
+            },
+            "description": "Generated from cURL: curl -X 'POST' \\\r\n  'https://localhost:7283/attendance/emb/3fa85f64-5717-4562-b3fc-2c963f66afa6/123' \\\r\n  -H 'accept: */*' \\\r\n  -d ''"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Photo",
+      "item": [
+        {
+          "name": "https://localhost:7283/ph/a/3fa85f64-5717-4562-b3fc-2c963f66afa6/3fa85f64-5717-4562-b3fc-2c963f66afa4",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "accept",
+                "value": "*/*"
+              }
+            ],
+            "url": {
+              "raw": "{{baseURL}}ph/a/3fa85f64-5717-4562-b3fc-2c963f66afa6/3fa85f64-5717-4562-b3fc-2c963f66afa4",
+              "host": [
+                "{{baseURL}}ph"
+              ],
+              "path": [
+                "a",
+                "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+                "3fa85f64-5717-4562-b3fc-2c963f66afa4"
+              ]
+            },
+            "description": "Generated from cURL: curl -X 'POST' \\\r\n  'https://localhost:7283/ph/a/3fa85f64-5717-4562-b3fc-2c963f66afa6/3fa85f64-5717-4562-b3fc-2c963f66afa4' \\\r\n  -H 'accept: */*' \\\r\n  -d ''"
+          },
+          "response": []
+        },
+        {
+          "name": "https://localhost:7283/attendance/ph/3fa85f64-5717-4562-b3fc-2c963f66afa4",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "accept",
+                "value": "*/*"
+              }
+            ],
+            "url": {
+              "raw": "{{baseURL}}attendance/ph/3fa85f64-5717-4562-b3fc-2c963f66afa4",
+              "host": [
+                "{{baseURL}}attendance"
+              ],
+              "path": [
+                "ph",
+                "3fa85f64-5717-4562-b3fc-2c963f66afa4"
+              ]
+            },
+            "description": "Generated from cURL: curl -X 'POST' \\\r\n  'https://localhost:7283/attendance/ph/3fa85f64-5717-4562-b3fc-2c963f66afa4' \\\r\n  -H 'accept: */*' \\\r\n  -d ''"
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseURL",
+      "value": ""
+    }
+  ]
+}

@@ -1,0 +1,194 @@
+[
+  {
+    "ContainingType": "AttendanceAPIs.Controllers.AttendanceApiController",
+    "Method": "Hello",
+    "RelativePath": "api/attendance/hello",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AttendanceAPIs.Controllers.AuthController",
+    "Method": "Hello",
+    "RelativePath": "api/auth/hello",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AttendanceAPIs.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "PMPoshanWithAngular.Server.JwtTokenModel.UserLogin",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AttendanceAPIs.Controllers.SchoolController",
+    "Method": "Hello",
+    "RelativePath": "api/School/hello",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AttendanceAPIs.Controllers.SchoolController",
+    "Method": "GetSchoolList",
+    "RelativePath": "api/School/SchoolList",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AttendanceAPIs.Controllers.StudentsController",
+    "Method": "Hello",
+    "RelativePath": "api/Students/hello",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AttendanceAPIs.Controllers.AttendanceApiController",
+    "Method": "SubmitAttendance",
+    "RelativePath": "attendance",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "PMPoshanWithAngular.Server.Data.CustomModels.Api.ApiAttendanceDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AttendanceAPIs.Controllers.EmbeddingController",
+    "Method": "UploadAttendanceEmbedding",
+    "RelativePath": "attendance/emb/{pg}/{t}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pg",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "t",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AttendanceAPIs.Controllers.PhotoController",
+    "Method": "UploadAttendancePhoto",
+    "RelativePath": "attendance/ph/{pg}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pg",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AttendanceAPIs.Controllers.EmbeddingController",
+    "Method": "UploadStudentEmbedding",
+    "RelativePath": "emb/{pt}/{sg}/{pg}/{t}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pt",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "sg",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "pg",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "t",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AttendanceAPIs.Controllers.PhotoController",
+    "Method": "UploadStudentPhoto",
+    "RelativePath": "ph/{pt}/{sg}/{pg}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pt",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "sg",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "pg",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AttendanceAPIs.Controllers.StudentsController",
+    "Method": "SaveStudents",
+    "RelativePath": "students",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "students",
+        "Type": "System.Collections.Generic.List\u00601[[PMPoshanWithAngular.Server.Data.CustomModels.Api.ApiStudentDto, AttendanceAPIs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
